@@ -1,11 +1,170 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Divider from '../components/Divider.astro';
+import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const activities = [
+	{
+		title: 'Ceremonia Civil',
+		description: 'Acompáñanos a recibir la bendición de Dios',
+		img: '/img/activities/wedding-rings_9242346.png',
+	},
+	{
+		title: 'Ceremonia',
+		description: 'Acompáñanos a recibir la bendición de Dios',
+		img: '/img/activities/church_515249.png',
+	},
+	{
+		title: 'Recepción',
+		description: 'Acompáñanos a recibir la bendición de Dios',
+		img: '/img/activities/wedding-arch_6585631.png',
+	},
+	{
+		title: 'Cóctel',
+		description: 'Acompáñanos a recibir la bendición de Dios',
+		img: '/img/activities/champagne_1270646.png',
+	},
+	{
+		title: 'Cena',
+		description: 'Acompáñanos a recibir la bendición de Dios',
+		img: '/img/activities/dish_3998280.png',
+	},
+	{
+		title: 'Baile',
+		description: 'Acompáñanos a recibir la bendición de Dios',
+		img: '/img/activities/dance_3929942.png',
+	},
+];
 ---
 
 <Layout>
-	<Welcome />
+	<section class="relative bg-marfil font-playfairDisplay">
+
+		<div class="relative h-svh w-svw">
+			<img src="/img/novios.webp" class="absolute w-full h-full object-cover z-0" alt="" srcset="">
+			<div class="absolute inset-0 bg-black/80"></div>
+			<div class="absolute w-full h-full flex flex-col justify-center items-center py-8 gap-3">
+				<h2 class="text-white text-5xl font-greatVibes">Fernanda y Ernesto</h2>
+				<span class="text-white font-cinzelDecorative text-lg">Sábado, 15 Marzo del 2025</span>
+			</div>
+		</div>
+
+		<div class="w-full py-8">
+			
+			<Title text={'¡Nos casamos!'} />
+
+			<div class="w-full flex flex-col justify-center items-center px-4 gap-2 mt-4 text-lg">
+				<p class="text-center font-cinzelDecorative">Cada familia tiene una historia, bienvenidos a la nuestra.</p>
+				<p class="text-center font-cinzelDecorative">
+					Después de grandes aventuras, viajes y muchos sueños e ilusiones,
+					hemos decidido dar el siguiente paso en nuestro viaje juntos.
+				</p>
+				<p class="text-center font-cinzelDecorative">INVITACIÓN válida PARA:</p>
+				<!-- <p class="text-center font-greatVibes text-5xl mt-4">Pedro Garcia Garcia</p> -->
+				 <Title text={'Pedro Garcia Garcia'} />
+				<p class="text-center font-cinzelDecorative text-2xl mt-4">5 pases  DISPONIBLES</p>
+				<p class="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
+			</div>
+
+			<div class="w-full text-xl flex flex-col justify-center items-center mt-4">
+				<p class="text-center text-lg font-cinzelDecorative">
+					Con el amor y apoyo de nuestros padres, te invitamos a ser testigo de nuestra unión.
+				</p>
+			</div>
+		</div>
+
+		<!-- <div class="divide-y divide-solid"></div> -->
+		<Divider />
+		<!-- Padres -->
+		
+		<div class="w-full py-8">
+
+			<div class="w-full flex flex-col justify-center items-center pt-4 gap-2">
+				<!-- <h2 class="text-5xl font-greatVibes">Padres de la novia</h2> -->
+				<Title text={'Padres de la novia'} />
+				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg">
+					<p>Amparo Martha Cuellar González</p>
+					<p>&</p>
+					<p>Víctor Eduardo Cabrera Solana</p>
+				</div>
+			</div>
+
+			<div class="w-full flex flex-col justify-center items-center pt-8 gap-2">
+				<!-- <h2 class="text-5xl font-greatVibes">Padres del novio</h2> -->
+				<Title text={'Padres del novio'} />
+				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg">
+					<p>Dalila Pasos Burboa</p>
+					<p>&</p>
+					<p>Fernando Cabrera Frausto</p>
+				</div>
+			</div>
+
+		</div>
+
+		<Divider />
+
+		<!-- ceremonia -->
+		<div class="w-full p-4">
+			<div class="w-full flex flex-col justify-center items-center gap-4">
+				<div class="w-full flex flex-col justify-center items-center gap-2">
+					<!-- <h2 class="font-greatVibes text-5xl">Ceremonia</h2> -->
+					<Title text={'Ceremonia'} />
+					<p class="text-center">Sábado, 26 de abril 2025.</p>
+					<p class="text-center">7:00 p.m.</p>
+					<p class="text-center">Parroquia de San Miguel Arcángel.</p>
+					<p class="text-center">Principal 1, Zona Centro, 37700 San Miguel de Allende, Gto.</p>
+				</div>
+
+				<div class="w-full flex flex-col justify-center items-center gap-2">
+					<!-- <h2 class="font-greatVibes text-5xl">Recepción</h2> -->
+					<Title text={'Recepción'} />
+					<p class="text-center">Sábado, 26 de Abril 2025.</p>
+					<p class="text-center">8:00 p.m.</p>
+					<p class="text-center">Los Jardines.</p>
+					<p class="text-center">Calle Río Mocorito 467, Colonia Prohogar, 21210 Mexicali, B.C.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- vestimenta -->
+		<Divider />
+
+		<div class="w-full p-4">
+			<Title text={'Código de vestimenta'} />
+			<p class="text-center">El blanco es un color hermoso, pero en esta ocasión es exclusivo para la novia. </p>
+
+			<div class="flex flex-col justify-center items-center">
+				<img class="w-1/2" src="/img/traje_1.png" alt="">
+				<h2 class="text-2xl font-playfairDisplay">HOMBRES</h2>
+				<p class="text-lg font-playfairDisplay">Traje y corbata</p>
+			</div>
+
+			<div class="flex flex-col justify-center items-center">
+				<img class="w-3/4" src="/img/vestido.png" alt="">
+				<h2 class="text-2xl font-playfairDisplay">MUJERES</h2>
+				<p class="text-lg font-playfairDisplay">Vestido largo</p>
+			</div>
+		</div>
+
+		<Divider />
+
+		<div class="w-full p-4">
+			<Title text={'Paso a paso'} />
+			<div class="w-full flex flex-col justify-center items-center">
+				<p class="text-center text-lg">Hemos planeado un día lleno de diversión, agradecemos tu puntualidad.</p>
+			</div>
+			<div class="grid grid-cols-2 gap-4 mt-2">
+				{activities.map(({title,description,img}) => (
+					<div class="flex flex-col justify-center items-center">
+						<div class="flex flex-col justify-center items-center">
+							<img class="w-1/3" src={img} alt="" />
+							<h2 class="text-xl font-semibold font-cinzelDecorative">{title}</h2>
+							<p class="text-center">{description}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+
+	</section>
 </Layout>
