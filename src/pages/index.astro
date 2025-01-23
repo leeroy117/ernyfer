@@ -41,11 +41,13 @@ const activities = [
 	<section class="relative bg-marfil font-playfairDisplay">
 
 		<div class="relative h-svh w-svw">
-			<img src="/img/novios.webp" class="absolute w-full h-full object-cover z-0" alt="" srcset="">
-			<div class="absolute inset-0 bg-black/80"></div>
+			<img src="/img/galeria/DSC00149Edit_2.jpg" class="absolute w-full h-full object-cover z-0" alt="" srcset="">
+			<div class="absolute inset-0 bg-black/25"></div>
 			<div class="absolute w-full h-full flex flex-col justify-center items-center py-8 gap-3">
-				<h2 class="text-white text-5xl font-greatVibes">Fernanda y Ernesto</h2>
-				<span class="text-white font-cinzelDecorative text-lg">Sábado, 15 Marzo del 2025</span>
+				<div class="absolute top-1/4 flex flex-col justify-center items-center">
+					<h2 class="text-white text-5xl font-greatVibes">Fernanda y Ernesto</h2>
+					<span class="text-white font-cinzelDecorative text-lg">Sábado, 15 Marzo del 2025</span>
+				</div>
 			</div>
 		</div>
 
@@ -85,9 +87,9 @@ const activities = [
 				<!-- <h2 class="text-5xl font-greatVibes">Padres de la novia</h2> -->
 				<Title text={'Padres de la novia'} />
 				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg">
-					<p>Amparo Martha Cuellar González</p>
+					<p>J. Malaquías Garcia Fonseca</p>
 					<p>&</p>
-					<p>Víctor Eduardo Cabrera Solana</p>
+					<p>Carmen Julia Chavez Santa Cruz</p>
 				</div>
 			</div>
 
@@ -95,9 +97,9 @@ const activities = [
 				<!-- <h2 class="text-5xl font-greatVibes">Padres del novio</h2> -->
 				<Title text={'Padres del novio'} />
 				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg">
-					<p>Dalila Pasos Burboa</p>
+					<p>José Ernesto Torres Remirez</p>
 					<p>&</p>
-					<p>Fernando Cabrera Frausto</p>
+					<p>Esmeralda Zamora Ibarra</p>
 				</div>
 			</div>
 
@@ -166,6 +168,41 @@ const activities = [
 				))}
 			</div>
 		</div>
+
+		<Divider />
+
+		<div class="w-full p-4 flex flex-col justify-center items-center">
+			<Title text={'Mesa de regalos'} />
+			<div class="w-full flex flex-col justify-center items-center">
+				<p class="text-center text-lg">Tu presencia es nuestro mejor regalo, pero si quieres tener un detalle con nosotros te damos algunas ideas.</p>
+			</div>
+			<div class="flex flex-col justify-center items-center mt-2 w-full gap-2">
+				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
+					<img class="w-5/12" src="https://invitarte.me/wp-content/uploads/2024/06/Logo-liverpool-1.png" alt="" srcset="">
+					<Divider />
+					<div class="flex flex-row justify-center items-center w-full">
+						<a class="w-1/2 flex flex-row justify-center " href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51586000">
+							<button class="text-sm bg-black text-white p-3 w-3/4">
+								Ver Mesa
+							</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
+					<img class="w-4/12" src="/img/amazon_2.png" alt="" srcset="">
+					<Divider />
+					<div class="flex flex-row justify-center items-center w-full">
+						<a class="w-1/2 flex flex-row justify-center " href="https://www.amazon.com.mx/wedding/registry/3BH8ZXQTIOGI9">
+							<button class="text-sm bg-black text-white p-3 w-3/4">
+								Ver Mesa
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 	</section>
 </Layout>
