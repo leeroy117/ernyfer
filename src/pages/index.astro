@@ -1,4 +1,5 @@
 ---
+import Countdown from '../components/Countdown';
 import Divider from '../components/Divider.astro';
 import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
@@ -44,16 +45,23 @@ const activities = [
 			<img src="/img/galeria/DSC00149Edit_2.jpg" class="absolute w-full h-full object-cover z-0" alt="" srcset="">
 			<div class="absolute inset-0 bg-black/25"></div>
 			<div class="absolute w-full h-full flex flex-col justify-center items-center py-8 gap-3">
-				<div class="absolute bottom-5 flex flex-col justify-center items-center">
+				<div class="absolute bottom-5 flex flex-col justify-center items-center animate__animated animate__backInDown animate__slow">
 					<h2 class="text-white text-5xl font-greatVibes">Fernanda y Ernesto</h2>
 					<span class="text-white font-cinzelDecorative text-lg">Sábado, 15 Marzo del 2025</span>
 				</div>
 			</div>
 		</div>
 
+		<!-- timer -->
+		
+
 		<div class="w-full py-8">
 			
 			<Title text={'¡Nos casamos!'} />
+
+			<div class="w-full mt-4">
+				<Countdown client:load/>
+			</div>
 
 			<div class="w-full flex flex-col justify-center items-center px-4 gap-2 mt-4 text-lg">
 				<p class="text-center font-cinzelDecorative">Cada familia tiene una historia, bienvenidos a la nuestra.</p>
