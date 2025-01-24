@@ -162,7 +162,7 @@ const activities = [
 
 		<Divider />
 
-		<div class="w-full p-4">
+		<!-- <div class="w-full p-4">
 			<Title text={'Paso a paso'} />
 			<div class="w-full flex flex-col justify-center items-center">
 				<p class="text-center text-lg">Hemos planeado un día lleno de diversión, agradecemos tu puntualidad.</p>
@@ -178,7 +178,9 @@ const activities = [
 					</div>
 				))}
 			</div>
-		</div>
+		</div> -->
+
+		<AsNavFor client:only="react"/>
 
 		<Divider />
 
@@ -190,7 +192,7 @@ const activities = [
 			<div class="flex flex-col justify-center items-center mt-2 w-full gap-2">
 				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
 					<img class="w-5/12" src="https://invitarte.me/wp-content/uploads/2024/06/Logo-liverpool-1.png" alt="" srcset="">
-					<Divider />
+					<div class="w-full h-1 border border-b-black"></div>
 					<div class="flex flex-row justify-center items-center w-full">
 						<a class="w-1/2 flex flex-row justify-center " href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51586000">
 							<button class="text-sm bg-black text-white p-3 w-3/4 rounded-lg">
@@ -202,7 +204,7 @@ const activities = [
 
 				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
 					<img class="w-4/12" src="/img/amazon_2.png" alt="" srcset="">
-					<Divider />
+					<div class="w-full h-1 border border-b-black"></div>
 					<div class="flex flex-row justify-center items-center w-full">
 						<a class="w-1/2 flex flex-row justify-center " href="https://www.amazon.com.mx/wedding/registry/3BH8ZXQTIOGI9">
 							<button class="text-sm bg-black text-white p-3 w-3/4 rounded-lg">
@@ -211,10 +213,19 @@ const activities = [
 						</a>
 					</div>
 				</div>
+
+				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
+					<img class="w-2/12" src="/img/envelope-svgrepo-com.svg" alt="" srcset="">
+					<div class="w-full h-1 border border-b-black"></div>
+					
+					<div class="flex flex-row justify-center items-center w-full">
+						<span class="font-semibold text-lg">Lluvia de sobres</span>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<AsNavFor client:only="react"/>
+		
 
 		<!-- <div class="w-full box-content">
 			<ShowSelectedImage client:load />

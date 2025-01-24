@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
+import Slider, { type Settings } from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -22,12 +22,14 @@ const SlideSlickWithNav = () => {
     asNavFor: slider2, // Conecta este slider con el segundo slider (miniaturas)
   };
 
-  const settingsNav = {
+  const settingsNav: Settings = {
     focusOnSelect: true, // Selección al hacer clic en la miniatura
     infinite: true,
     centerMode: true,
     slidesToShow: 3, // Mostrar 3 miniaturas a la vez
     asNavFor: slider1, // Conecta este slider con el principal
+    autoplay: true, // Hacer transición
+    autoplaySpeed: 1200, // Tiempo de transición entre slides
   };
 
   return (
@@ -39,7 +41,7 @@ const SlideSlickWithNav = () => {
       >
         {images.map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`Image ${index + 1}`} className="w-full h-auto drop-shadow-md rounded-lg" />
+            <img src={src} alt={`Image ${index + 1}`} className="w-full h-[75svh] object-cover shadow-cImage rounded-lg" />
           </div>
         ))}
       </Slider>
