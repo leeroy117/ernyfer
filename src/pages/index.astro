@@ -3,6 +3,8 @@ import Countdown from '../components/Countdown';
 import Divider from '../components/Divider.astro';
 import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
+import SlideSlick from '../components/SlideSlick';
+import ShowSelectedImage from '../components/showSelectedImage';
 
 const activities = [
 	{
@@ -211,6 +213,21 @@ const activities = [
 			</div>
 		</div>
 
+		<div class="w-full p-4">
+			<ShowSelectedImage client:load />
+		</div>
 
+		<div class="w-full p-4">
+			<SlideSlick client:only="react"/>
+		</div>
+
+		<!-- <div class="relative w-full h-64 overflow-hidden">
+			<img src="/img/galeria/DSC00006.jpg" alt="Imagen Desgastada" class="w-full h-full object-cover filter blur-sm">
+		</div>
+
+		<div class="relative w-full h-64">
+			<img src="/img/galeria/DSC00006.jpg" alt="Imagen Desgastada" class="w-full h-full object-cover">
+			<div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent opacity-40"></div>
+		</div> -->
 	</section>
 </Layout>
