@@ -53,7 +53,7 @@ function Countdown() {
                 .split('').map(x => (<Digit digit={x} />))}
 
             </div>
-            <h4 className="text-xl font-semibold">Días</h4>
+            <h4 className="text-xl font-semibold text-white">Días</h4>
           </div>
 
           <div className="flex flex-col justify-center items-center">
@@ -64,7 +64,7 @@ function Countdown() {
 
             </div>
             {/* </div> */}
-            <h4 className="text-xl font-semibold">Horas</h4>
+            <h4 className="text-xl font-semibold text-white">Horas</h4>
           </div>
 
           <div className="flex flex-col justify-center items-center">
@@ -76,7 +76,7 @@ function Countdown() {
                 .split('').map(x => (<Digit digit={x} />))}
 
             </div>
-            <h4 className="text-xl font-semibold">Min</h4>
+            <h4 className="text-xl font-semibold text-white">Min</h4>
           </div>
 
           <div className="flex flex-col justify-center items-center">
@@ -88,7 +88,7 @@ function Countdown() {
                 .split('').map(x => (<Digit digit={x} />))}
 
             </div>
-            <h4 className="text-xl font-semibold">Seg</h4>
+            <h4 className="text-xl font-semibold text-white">Seg</h4>
           </div>
 
           {/* <div className="flex flex-col justify-center items-center">

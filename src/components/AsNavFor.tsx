@@ -33,7 +33,7 @@ const SlideSlickWithNav = () => {
   };
 
   return (
-    <div className='p-4'>
+    <div className='flex flex-col gap-2 p-4'>
       {/* Carousel Principal */}
       <Slider
         ref={(slider) => setSlider1(slider)} // Referencia para el carousel principal
@@ -41,7 +41,7 @@ const SlideSlickWithNav = () => {
       >
         {images.map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`Image ${index + 1}`} className="w-full h-[75svh] object-cover shadow-cImage rounded-lg" />
+            <img src={src} alt={`Image ${index + 1}`} className="w-full h-[75svh] object-cover drop-shadow-xl rounded-lg" />
           </div>
         ))}
       </Slider>
