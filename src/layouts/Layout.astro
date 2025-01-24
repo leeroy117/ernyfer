@@ -1,5 +1,15 @@
 ---
+import "@fontsource/great-vibes";
+import '@fontsource/cinzel-decorative';
+import '@fontsource-variable/playfair-display';
 import 'animate.css';
+
+const frontmatter = {
+  title: "Fernanda y Ernesto | Boda",
+  description: "Guarda la fecha para un día lleno de amor, alegría y momentos inolvidables.",
+  ogImage: "https://fernandayernestowedding.netlify.app/img/galeria/DSC00149-Editar_reducida.png",
+//   ogImage: "https://fernandayernesto.love/img/Z01_5585_simple_resize_dos.png",
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -8,7 +18,20 @@ import 'animate.css';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Fernanda y Ernesto | Boda</title>
+
+		<meta property="og:title" content={frontmatter.title} />
+		<meta property="og:description" content={frontmatter.description} />
+		<meta property="og:url" content="https://www.fernandayernesto.love" />
+		<meta property="og:image" content={frontmatter.ogImage} />
+		<meta property="og:image:url" content={frontmatter.ogImage} />
+		<meta property="og:image:secure_url" content={frontmatter.ogImage} />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:image:alt" content="es_ES" />
 	</head>
 	<body>
 		<slot />
