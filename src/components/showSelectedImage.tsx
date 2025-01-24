@@ -9,7 +9,9 @@ function ShowSelectedImage() {
     const $isCartOpen = useStore(isSelectedImage);
 
     return (
-        <img className="w-full" src={IMAGES[$isCartOpen].url} alt="" />
+        <div className="w-full p-4">
+            <img className="relative w-full drop-shadow-lg rounded-lg" src={IMAGES[$isCartOpen].url} alt="" />
+        </div>
     )
 }
 

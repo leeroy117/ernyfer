@@ -43,7 +43,7 @@ function CenterMode () {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "100px",
+    centerPadding: "70px",
     slidesToShow: 1,
     speed: 500,
     autoplaySpeed: 2000,
@@ -85,14 +85,13 @@ function CenterMode () {
   };
 
   return (
-    <div className="slider-container">
-      {/* <Slider className="center" centerMode={true} infinite={true} centerPadding="60px" slidesToShow={3} speed={500}> */}
+    <div className="relative slider-container w-full">
       <Slider {...settings} >
         {
           images.map(({id, url}) => {
             return (
               <div id={id.toString()}>
-                <img className="w-11/12" src={url} alt="" />
+                <img className="w-11/12 drop-shadow-md rounded-lg" src={url} alt="" />
               </div>
             )
           })
