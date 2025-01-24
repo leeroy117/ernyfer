@@ -1,0 +1,66 @@
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const SlideSlickWithNav = () => {
+  const [slider1, setSlider1] = useState(null); // Referencia para el carousel principal
+  const [slider2, setSlider2] = useState(null); // Referencia para el carousel de miniaturas
+
+  const images = [
+    "/img/galeria/DSC00006.jpg",
+    "/img/galeria/DSC09883.jpg",
+    "/img/galeria/DSC09902.jpg",
+    "/img/galeria/DSC09919.jpg",
+    "/img/galeria/DSC09929.jpg",
+    "/img/galeria/DSC09991.jpg",
+  ];
+
+  const settingsMain = {
+    arrows: false, // No flechas en el carousel principal
+    fade: true,    // Hacer transición en fade
+    asNavFor: slider2, // Conecta este slider con el segundo slider (miniaturas)
+  };
+
+  const settingsNav = {
+    focusOnSelect: true, // Selección al hacer clic en la miniatura
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 3, // Mostrar 3 miniaturas a la vez
+    asNavFor: slider1, // Conecta este slider con el principal
+  };
+
+  return (
+    <div className='p-4'>
+      {/* Carousel Principal */}
+      <Slider
+        ref={(slider) => setSlider1(slider)} // Referencia para el carousel principal
+        {...settingsMain}
+      >
+        {images.map((src, index) => (
+          <div key={index}>
+            <img src={src} alt={`Image ${index + 1}`} className="w-full h-auto drop-shadow-md rounded-lg" />
+          </div>
+        ))}
+      </Slider>
+
+      {/* Carousel de Navegación (Miniaturas) */}
+      <Slider
+        ref={(slider) => setSlider2(slider)} // Referencia para el carousel de miniaturas
+        {...settingsNav}
+      >
+        {images.map((src, index) => (
+          <div key={index}>
+            <img
+              src={src}
+              alt={`Thumbnail ${index + 1}`}
+              className="w-20 h-20 object-cover cursor-pointer drop-shadow-md rounded-md"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default SlideSlickWithNav;

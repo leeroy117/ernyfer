@@ -49,6 +49,7 @@ function CenterMode () {
     autoplaySpeed: 2000,
     initialSlide: 0,
     arrows: true,
+    slide: '',    
     afterChange: (current: number) => {
       console.log("🚀 ~ CenterMode ~ current:", current);
       isSelectedImage.set(current)
