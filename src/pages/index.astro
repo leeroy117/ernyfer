@@ -3,42 +3,8 @@ import Countdown from '../components/Countdown';
 import Divider from '../components/Divider.astro';
 import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
-import SlideSlick from '../components/SlideSlick';
-import ShowSelectedImage from '../components/showSelectedImage';
 import AsNavFor from '../components/AsNavFor.tsx';
-
-const activities = [
-	{
-		title: 'Ceremonia Civil',
-		description: 'Acompáñanos a recibir la bendición de Dios',
-		img: '/img/activities/wedding-rings_9242346.png',
-	},
-	{
-		title: 'Ceremonia',
-		description: 'Acompáñanos a recibir la bendición de Dios',
-		img: '/img/activities/church_515249.png',
-	},
-	{
-		title: 'Recepción',
-		description: 'Acompáñanos a recibir la bendición de Dios',
-		img: '/img/activities/wedding-arch_6585631.png',
-	},
-	{
-		title: 'Cóctel',
-		description: 'Acompáñanos a recibir la bendición de Dios',
-		img: '/img/activities/champagne_1270646.png',
-	},
-	{
-		title: 'Cena',
-		description: 'Acompáñanos a recibir la bendición de Dios',
-		img: '/img/activities/dish_3998280.png',
-	},
-	{
-		title: 'Baile',
-		description: 'Acompáñanos a recibir la bendición de Dios',
-		img: '/img/activities/dance_3929942.png',
-	},
-];
+import Guess from '../components/Guess.tsx';
 ---
 
 <Layout>
@@ -59,58 +25,43 @@ const activities = [
 		</div>
 
 		<!-- timer -->
-		
 
-		<div class="w-full py-8">
-			
+		<div class="w-full py-8 px-4 flex flex-col justify-center gap-3">
 			<Title text={'¡Nos casamos!'} />
-
-			<!-- <div class="w-full mt-4">
-				<Countdown client:load/>
-			</div> -->
-
-			<div class="w-full flex flex-col justify-center items-center px-4 gap-2 mt-4 text-lg">
-				<p class="text-center font-cinzelDecorative">Cada familia tiene una historia, bienvenidos a la nuestra.</p>
+			<p class="text-center font-cinzelDecorative">Cada familia tiene una historia, bienvenidos a la nuestra.</p>
 				<p class="text-center font-cinzelDecorative">
 					Después de grandes aventuras, viajes y muchos sueños e ilusiones,
 					hemos decidido dar el siguiente paso en nuestro viaje juntos.
 				</p>
-				<p class="text-center font-cinzelDecorative">INVITACIÓN válida PARA:</p>
-				<!-- <p class="text-center font-greatVibes text-5xl mt-4">Pedro Garcia Garcia</p> -->
-				 <Title text={'Pedro Garcia Garcia'} />
-				<p class="text-center font-cinzelDecorative text-2xl mt-4">5 pases  DISPONIBLES</p>
-				<p class="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
-				<p class="text-center font-cinzelDecorative mt-4">Puedes llevar un acompañante, ¿confirmas su asistencia? </p>
-
-			</div>
-
-			<div class="w-full text-xl flex flex-col justify-center items-center mt-4">
-				<p class="text-center text-lg font-cinzelDecorative">
-					Con el amor y apoyo de nuestros padres, te invitamos a ser testigo de nuestra unión.
-				</p>
-			</div>
 		</div>
 
-		<!-- <div class="divide-y divide-solid"></div> -->
 		<Divider />
+
+		{/* Carousel */}
+		<div class="w-full box-border">
+			<AsNavFor client:only="react"/>
+		</div>
+		
+		<Divider />
+		
 		<!-- Padres -->
 		
 		<div class="w-full py-8">
 
-			<div class="w-full flex flex-col justify-center items-center pt-4 gap-2">
+			<div class="w-full flex flex-col justify-center items-center pt-4 text-base/7">
 				<!-- <h2 class="text-5xl font-greatVibes">Padres de la novia</h2> -->
 				<Title text={'Padres de la novia'} />
-				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg">
+				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg/7">
 					<p>J. Malaquías Garcia Fonseca</p>
 					<p>&</p>
 					<p>Carmen Julia Chavez Santa Cruz</p>
 				</div>
 			</div>
 
-			<div class="w-full flex flex-col justify-center items-center pt-8 gap-2">
+			<div class="w-full flex flex-col justify-center items-center pt-8 text-base/7">
 				<!-- <h2 class="text-5xl font-greatVibes">Padres del novio</h2> -->
 				<Title text={'Padres del novio'} />
-				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg">
+				<div class="flex flex-col justify-center items-center font-cinzelDecorative text-lg/7">
 					<p>José Ernesto Torres Remirez</p>
 					<p>&</p>
 					<p>Esmeralda Zamora Ibarra</p>
@@ -124,21 +75,39 @@ const activities = [
 		<!-- ceremonia -->
 		<div class="w-full p-4">
 			<div class="w-full flex flex-col justify-center items-center gap-4">
-				<div class="w-full flex flex-col justify-center items-center gap-2">
+				<div class="w-full flex flex-col justify-center items-center text-base/7">
 					<!-- <h2 class="font-greatVibes text-5xl">Ceremonia</h2> -->
 					<Title text={'Ceremonia'} />
-					<p class="text-center">Sábado, 15 de marzo del 2025.</p>
-					<p class="text-center">12:00 PM</p>
-					<p class="text-center">Iglesia San Carlos Borromeo</p>
-					<!-- <p class="text-center">Principal 1, Zona Centro, 37700 San Miguel de Allende, Gto.</p> -->
-				</div>
+					<p class="text-center uppercase font-semibold">Parroquia san carlos borromeo</p>
+					<p>Sábado, 15 de marzo del 2025. </p>
+					<p>Hora: 12:00 PM</p>
+					<div class="w-full flex flex-row justify-center items-center">
+						<img class="w-3/4" src="/img/parroquia.png" alt="" >
 
-				<div class="w-full flex flex-col justify-center items-center gap-2">
+					</div>
+					<a class="mt-2" href="https://maps.app.goo.gl/3x9Tw3DcdpELv5u77">
+						<button class="text-sm bg-black text-white p-3 w-full rounded-lg">
+							Ver mapa
+						</button>
+					</a>
+				</div>
+				
+				<div class="w-full flex flex-col justify-center items-center text-base/7">
 					<Title text={'Recepción'} />
-					<p class="text-center">Sábado, 15 de marzo del 2025.</p>
+					<p class="text-center uppercase font-semibold">Jardín Quinta Zazueta.</p>
+					<p class="text-center uppercase">8:00 p.m.</p>
+					
+					<div class="w-full flex flex-row justify-center items-center">
+						<img class="w-3/4" src="/img/quinta.png" alt="" >
+					</div>
+					<a href="https://maps.app.goo.gl/dfAhU51WsH5JrDez9">
+						<button class="text-sm bg-black text-white p-3 w-full rounded-lg">
+							Ver mapa
+						</button>
+					</a>
+					<!-- <p class="text-center">Sábado, 15 de marzo del 2025.</p>
 					<p class="text-center">8:00 p.m.</p>
-					<p class="text-center"> Jardín Quinta Zazueta.</p>
-					<!-- <p class="text-center">Calle Río Mocorito 467, Colonia Prohogar, 21210 Mexicali, B.C.</p> -->
+					<p class="text-center"> Jardín Quinta Zazueta.</p> -->
 				</div>
 			</div>
 		</div>
@@ -146,45 +115,10 @@ const activities = [
 		<!-- vestimenta -->
 		<Divider />
 
-		<div class="w-full p-4">
+		<div class="w-full p-4  text-base/7">
 			<Title text={'Código de vestimenta'} />
-			<p class="text-center">Formal, pero con libertad para lucir espectaculares. Evita el Verde, Blanco y Rojo. 👗🕺</p>
-
-			<!-- <div class="flex flex-col justify-center items-center">
-				<img class="w-1/2" src="/img/traje_1.png" alt="">
-				<h2 class="text-2xl font-playfairDisplay">HOMBRES</h2>
-				<p class="text-lg font-playfairDisplay">Traje y corbata</p>
-			</div>
-
-			<div class="flex flex-col justify-center items-center">
-				<img class="w-3/4" src="/img/vestido.png" alt="">
-				<h2 class="text-2xl font-playfairDisplay">MUJERES</h2>
-				<p class="text-lg font-playfairDisplay">Vestido largo</p>
-			</div> -->
-		</div>
-
-		<Divider />
-
-		<!-- <div class="w-full p-4">
-			<Title text={'Paso a paso'} />
-			<div class="w-full flex flex-col justify-center items-center">
-				<p class="text-center text-lg">Hemos planeado un día lleno de diversión, agradecemos tu puntualidad.</p>
-			</div>
-			<div class="grid grid-cols-2 gap-4 mt-2">
-				{activities.map(({title,description,img}) => (
-					<div class="flex flex-col justify-center items-center">
-						<div class="flex flex-col justify-center items-center">
-							<img class="w-1/3" src={img} alt="" />
-							<h2 class="text-xl font-semibold font-cinzelDecorative">{title}</h2>
-							<p class="text-center">{description}</p>
-						</div>
-					</div>
-				))}
-			</div>
-		</div> -->
-
-		<div class="w-full box-border">
-			<AsNavFor client:only="react"/>
+			<p class="text-center">Formal, pero con libertad para lucir espectaculares.</p>
+			<p class="text-center">Evita el Verde, Blanco y Rojo. 👗🕺</p>
 		</div>
 
 		<Divider />
@@ -230,23 +164,28 @@ const activities = [
 			</div>
 		</div>
 
-		
+		<Divider />
 
-		<!-- <div class="w-full box-content">
-			<ShowSelectedImage client:load />
+		<div class="w-full py-8 px-4">
+
+			<div class="w-full flex flex-col justify-center items-center px-4 mt-4 text-base/7">
+				<p class="text-center font-cinzelDecorative ">INVITACIÓN PARA:</p>
+				<!-- <p class="text-center font-greatVibes text-5xl mt-4">Pedro Garcia Garcia</p> -->
+				<div class="mt-2">
+					<Title text={'Pedro Garcia Garcia'} />
+				</div>
+				<p class="text-center font-cinzelDecorative text-xl mt-2">5 pases  DISPONIBLES</p>
+				<!-- <Guess  client:only /> -->
+				<p class="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
+				<p class="text-center font-cinzelDecorative mt-4">Puedes llevar un acompañante, ¿confirmas su asistencia? </p>
+
+			</div>
+
+			<div class="w-full text-xl flex flex-col justify-center items-center mt-4">
+				<p class="text-center text-lg font-cinzelDecorative">
+					Para que todos puedan disfrutar plenamente de la velada, agradecemos que sea un evento exclusivo para adultos.
+				</p>
+			</div>
 		</div>
-
-		<div class="w-full px-4 box-content">
-			<SlideSlick client:only="react"/>
-		</div> -->
-
-		<!-- <div class="relative w-full h-64 overflow-hidden">
-			<img src="/img/galeria/DSC00006.jpg" alt="Imagen Desgastada" class="w-full h-full object-cover filter blur-sm">
-		</div>
-
-		<div class="relative w-full h-64">
-			<img src="/img/galeria/DSC00006.jpg" alt="Imagen Desgastada" class="w-full h-full object-cover">
-			<div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent opacity-40"></div>
-		</div> -->
 	</section>
 </Layout>
