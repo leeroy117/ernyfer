@@ -51,10 +51,10 @@ function Guess() {
                         </div>
                     ))
                 }
-				
-				<p className="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
-				<p className="text-center font-cinzelDecorative mt-4">Puedes llevar un acompañante, ¿confirmas su asistencia? </p>
 
+                {
+                   <img src={invitado.qr_invitacion} alt="" />
+                }
 			</div>
         </>
      );
