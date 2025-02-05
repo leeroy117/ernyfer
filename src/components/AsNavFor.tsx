@@ -41,7 +41,16 @@ const SlideSlickWithNav = () => {
       >
         {images.map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`Image ${index + 1}`} className="w-full h-[75svh] object-cover drop-shadow-xl rounded-lg" />
+            <img 
+              src={src} 
+              alt={`Image ${index + 1}`} 
+              className="w-full 
+              h-[75svh]  
+              rounded-lg
+              md:object-contain
+              object-cover drop-shadow-xl 
+              lg:h-[75svh] lg:object-contain lg:object-center
+              " />
           </div>
         ))}
       </Slider>
@@ -52,12 +61,18 @@ const SlideSlickWithNav = () => {
         {...settingsNav}
       >
         {images.map((src, index) => (
-          <div key={index}>
-            <img
-              src={src}
-              alt={`Thumbnail ${index + 1}`}
-              className="w-20 h-20 object-cover cursor-pointer drop-shadow-md rounded-md"
-            />
+          <div className='flex flex-row justify-center items-center gap-4 xl:px-12' key={index}>
+            {/* <picture className='px-5'> */}
+              <img
+                src={src}
+                alt={`Thumbnail ${index + 1}`}
+                className="w-20 h-20 md:w-48 lg:w-full lg:h-32 object-cover cursor-pointer drop-shadow-md rounded-lg px-2 
+                lg:object-cover lg:object-center 
+                xl:w-[50svw] xl:object-cover xl:object-center 
+                xl:px-0
+                "
+              />
+            {/* </picture> */}
           </div>
         ))}
       </Slider>

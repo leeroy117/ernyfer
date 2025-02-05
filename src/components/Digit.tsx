@@ -11,6 +11,9 @@ function Digit({digit} : Props) {
                 bg-[#ddd4c0] p-1 rounded-lg shadow-sm
                 sm:w-7
                 md:w-8
+                lg:w-16
+                lg:text-6xl
+                lg:p-3
             "
         >
             {digit} 

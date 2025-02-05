@@ -18,8 +18,8 @@ import Guess from '../components/Guess.tsx';
 			<div class="absolute inset-0 bg-black/25"></div>
 			<div class="absolute w-full h-full flex flex-col justify-center items-center py-8 gap-3">
 				<div class="absolute bottom-5 flex flex-col justify-center items-center animate__animated animate__backInDown animate__slow">
-					<h2 class="text-white text-5xl font-greatVibes">Fernanda y Ernesto</h2>
-					<span class="text-white font-cinzelDecorative text-lg">Sábado, 15 Marzo del 2025</span>
+					<h2 class="text-white text-5xl lg:text-9xl xl:text-9xl font-greatVibes">Fernanda y Ernesto</h2>
+					<span class="text-white font-cinzelDecorative text-lg lg:text-2xl xl:text-2xl">Sábado, 15 Marzo del 2025</span>
 				</div>
 			</div>
 		</div>
@@ -82,7 +82,7 @@ import Guess from '../components/Guess.tsx';
 					<p>Sábado, 15 de marzo del 2025. </p>
 					<p>Hora: 12:00 PM</p>
 					<div class="w-full flex flex-row justify-center items-center">
-						<img class="w-3/4" src="/img/parroquia.png" alt="" >
+						<img class="w-3/4 lg:w-1/4" src="/img/parroquia.png" alt="" >
 
 					</div>
 					<a class="mt-2" href="https://maps.app.goo.gl/3x9Tw3DcdpELv5u77">
@@ -98,9 +98,9 @@ import Guess from '../components/Guess.tsx';
 					<p class="text-center uppercase">8:00 p.m.</p>
 					
 					<div class="w-full flex flex-row justify-center items-center">
-						<img class="w-3/4" src="/img/quinta.png" alt="" >
+						<img class="w-3/4 lg:w-1/4" src="/img/quinta.png" alt="" >
 					</div>
-					<a href="https://maps.app.goo.gl/dfAhU51WsH5JrDez9">
+					<a class="mt-2" href="https://maps.app.goo.gl/dfAhU51WsH5JrDez9">
 						<button class="text-sm bg-black text-white p-3 w-full rounded-lg">
 							Ver mapa
 						</button>
@@ -128,33 +128,38 @@ import Guess from '../components/Guess.tsx';
 			<div class="w-full flex flex-col justify-center items-center">
 				<p class="text-center text-lg">Tu presencia es nuestro mejor regalo, pero si quieres tener un detalle con nosotros te damos algunas ideas.</p>
 			</div>
-			<div class="flex flex-col justify-center items-center mt-2 w-full gap-2">
-				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
-					<img class="w-5/12" src="https://invitarte.me/wp-content/uploads/2024/06/Logo-liverpool-1.png" alt="" srcset="">
+			<div class="flex flex-col justify-center items-center mt-2 w-full gap-2 lg:gap-5">
+				
+				<div class="flex flex-col justify-center items-center w-full lg:w-1/2 shadow-md p-4 gap-2">
+					<img class="w-5/12 lg:w-2/12" src="https://invitarte.me/wp-content/uploads/2024/06/Logo-liverpool-1.png" alt="" srcset="">
 					<div class="w-full h-1 border border-b-black"></div>
 					<div class="flex flex-row justify-center items-center w-full">
 						<a class="w-1/2 flex flex-row justify-center " href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51586000">
-							<button class="text-sm bg-black text-white p-3 w-3/4 rounded-lg">
+							<button class="text-sm bg-black text-white p-3 w-3/4 rounded-lg
+								hover:scale-110 transition-transform
+							">
 								Ver Mesa
 							</button>
 						</a>
 					</div>
 				</div>
 
-				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
-					<img class="w-4/12" src="/img/amazon_2.png" alt="" srcset="">
+				<div class="flex flex-col justify-center items-center w-full lg:w-1/2 shadow-md p-4 gap-2">
+					<img class="w-4/12 lg:w-2/12" src="/img/amazon_2.png" alt="" srcset="">
 					<div class="w-full h-1 border border-b-black"></div>
 					<div class="flex flex-row justify-center items-center w-full">
 						<a class="w-1/2 flex flex-row justify-center " href="https://www.amazon.com.mx/wedding/registry/3BH8ZXQTIOGI9">
-							<button class="text-sm bg-black text-white p-3 w-3/4 rounded-lg">
+							<button class="text-sm bg-black text-white p-3 w-3/4 rounded-lg
+								hover:scale-110 transition-transform
+							">
 								Ver Mesa
 							</button>
 						</a>
 					</div>
 				</div>
 
-				<div class="flex flex-col justify-center items-center w-full shadow-md p-4 gap-2">
-					<img class="w-2/12" src="/img/envelope-svgrepo-com.svg" alt="" srcset="">
+				<div class="flex flex-col justify-center items-center w-full lg:w-1/2 shadow-md p-4 gap-2">
+					<img class="w-2/12 lg:w-2/12 lg:h-20" src="/img/envelope-svgrepo-com.svg" alt="" srcset="">
 					<div class="w-full h-1 border border-b-black"></div>
 					
 					<div class="flex flex-row justify-center items-center w-full">
@@ -168,18 +173,18 @@ import Guess from '../components/Guess.tsx';
 
 		<div class="w-full py-8 px-4">
 
-			<div class="w-full flex flex-col justify-center items-center px-4 mt-4 text-base/7">
-				<p class="text-center font-cinzelDecorative ">INVITACIÓN PARA:</p>
+			<!-- <div class="w-full flex flex-col justify-center items-center px-4 mt-4 text-base/7"> -->
+				<!-- <p class="text-center font-cinzelDecorative ">INVITACIÓN PARA:</p> -->
 				<!-- <p class="text-center font-greatVibes text-5xl mt-4">Pedro Garcia Garcia</p> -->
-				<div class="mt-2">
+				<!-- <div class="mt-2">
 					<Title text={'Pedro Garcia Garcia'} />
-				</div>
-				<p class="text-center font-cinzelDecorative text-xl mt-2">5 pases  DISPONIBLES</p>
-				<!-- <Guess  client:only /> -->
-				<p class="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
-				<p class="text-center font-cinzelDecorative mt-4">Puedes llevar un acompañante, ¿confirmas su asistencia? </p>
+				</div> -->
+				<!-- <p class="text-center font-cinzelDecorative text-xl mt-2">5 pases  DISPONIBLES</p> -->
+				<Guess  client:only />
+				<!-- <p class="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
+				<p class="text-center font-cinzelDecorative mt-4">Puedes llevar un acompañante, ¿confirmas su asistencia? </p> -->
 
-			</div>
+			<!-- </div> -->
 
 			<div class="w-full text-xl flex flex-col justify-center items-center mt-4">
 				<p class="text-center text-lg font-cinzelDecorative">
