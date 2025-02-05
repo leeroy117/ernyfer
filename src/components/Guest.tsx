@@ -43,6 +43,7 @@ function Guest() {
                 {
                 <img src={invitado.qr_invitacion} alt="" />
                 }
+                
                 {
                     (invitado.acompanantes.length > 0) && <h2 className='text-center font-cinzelDecorative text-xl mt-4 '>Acompañantes:</h2>
                 }
