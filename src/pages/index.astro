@@ -4,7 +4,7 @@ import Divider from '../components/Divider.astro';
 import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
 import AsNavFor from '../components/AsNavFor.tsx';
-import Guess from '../components/Guess.tsx';
+import Guest from '../components/Guest.tsx';
 ---
 
 <Layout>
@@ -118,7 +118,21 @@ import Guess from '../components/Guess.tsx';
 		<div class="w-full p-4  text-base/7">
 			<Title text={'Código de vestimenta'} />
 			<p class="text-center">Formal, pero con libertad para lucir espectaculares.</p>
-			<p class="text-center">Evita el Verde, Blanco y Rojo. 👗🕺</p>
+			<!-- <p class="text-center">Evita el Verde, Blanco y Rojo. 👗🕺</p> -->
+			<p class="text-center font-semibold text-lg">Evita los colores: </p>
+			<div class="flex flex-row justify-center">
+				<div class="flex flex-row justify-center items-center gap-1 ml-1">
+					<p> Verde </p> <div class="w-5 h-5 rounded-full bg-gradient-to-r from-green-950 to-green-400 drop-shadow-md"></div>
+				</div>
+				<div class="flex flex-row justify-center items-center gap-1">
+					<p>, Blanco </p> <div class="w-5 h-5 rounded-full bg-gradient-to-r from-gray-950 to-gray-50 drop-shadow-md"></div>
+				</div>
+				<div class="flex flex-row justify-center items-center gap-1 ml-1">
+					<p> y Rojo </p> <div class="w-5 h-5 rounded-full bg-gradient-to-r from-red-950 to-red-400 drop-shadow-md"></div>
+				</div>
+				<p class="text-center">👗🕺</p>
+			</div>
+			
 		</div>
 
 		<Divider />
@@ -172,20 +186,7 @@ import Guess from '../components/Guess.tsx';
 		<Divider />
 
 		<div class="w-full py-8 px-4">
-
-			<!-- <div class="w-full flex flex-col justify-center items-center px-4 mt-4 text-base/7"> -->
-				<!-- <p class="text-center font-cinzelDecorative ">INVITACIÓN PARA:</p> -->
-				<!-- <p class="text-center font-greatVibes text-5xl mt-4">Pedro Garcia Garcia</p> -->
-				<!-- <div class="mt-2">
-					<Title text={'Pedro Garcia Garcia'} />
-				</div> -->
-				<!-- <p class="text-center font-cinzelDecorative text-xl mt-2">5 pases  DISPONIBLES</p> -->
-				<Guess  client:only />
-				<!-- <p class="text-center font-cinzelDecorative mt-4">Nos encantaría que nos acompañaras a celebrar nuestro amor y compromiso.</p>
-				<p class="text-center font-cinzelDecorative mt-4">Puedes llevar un acompañante, ¿confirmas su asistencia? </p> -->
-
-			<!-- </div> -->
-
+			<Guest  client:only />
 			<div class="w-full text-xl flex flex-col justify-center items-center mt-4">
 				<p class="text-center text-lg font-cinzelDecorative">
 					Para que todos puedan disfrutar plenamente de la velada, agradecemos que sea un evento exclusivo para adultos.

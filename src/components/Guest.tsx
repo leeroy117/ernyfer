@@ -15,7 +15,7 @@ interface IAcompanante {
     apellidos: string;
 }
 
-function Guess() {
+function Guest() {
     const queryParameters = new URLSearchParams(window.location.search)
     const id = queryParameters.get("inv")
     console.log("🚀 ~ Guess ~ id:", id)
@@ -60,4 +60,4 @@ function Guess() {
      );
 }
 
-export default Guess;
+export default Guest;
