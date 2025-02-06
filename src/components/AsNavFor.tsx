@@ -8,12 +8,12 @@ const SlideSlickWithNav = () => {
   const [slider2, setSlider2] = useState(null); // Referencia para el carousel de miniaturas
 
   const images = [
-    "/img/galeria/DSC00006.jpg",
-    "/img/galeria/DSC09883.jpg",
-    "/img/galeria/DSC09902.jpg",
-    "/img/galeria/DSC09919.jpg",
-    "/img/galeria/DSC09929.jpg",
-    "/img/galeria/DSC09991.jpg",
+    "/img/galeria/new/DSC09929.jpg",
+    "/img/galeria/new/DSC09916.jpg",
+    "/img/galeria/new/DSC09871.jpg",
+    "/img/galeria/new/DSC00247.jpg",
+    "/img/galeria/new/DSC00076_vertical.jpg",
+    "/img/galeria/new/DSC00200_vertical.jpg",
   ];
 
   const settingsMain = {
@@ -48,7 +48,7 @@ const SlideSlickWithNav = () => {
               h-[75svh]  
               rounded-lg
               md:object-contain
-              object-cover drop-shadow-xl 
+              object-cover object-center drop-shadow-xl 
               lg:h-[75svh] lg:object-contain lg:object-center
               " />
           </div>
