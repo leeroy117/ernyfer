@@ -14,6 +14,7 @@ const SlideSlickWithNav = () => {
     "/img/galeria/new/DSC00247.jpg",
     "/img/galeria/new/DSC00076_vertical.jpg",
     "/img/galeria/new/DSC00200_vertical.jpg",
+    "/img/galeria/new/DSC09984.jpg",
   ];
 
   const settingsMain = {
@@ -48,7 +49,7 @@ const SlideSlickWithNav = () => {
               h-[75svh]  
               rounded-lg
               md:object-contain
-              object-cover object-center drop-shadow-xl 
+              object-contain object-center drop-shadow-xl 
               lg:h-[75svh] lg:object-contain lg:object-center
               " />
           </div>
