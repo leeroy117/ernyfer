@@ -12,7 +12,6 @@ const SlideSlickWithNav = () => {
     "/img/galeria/new/DSC09916.jpg",
     "/img/galeria/new/DSC09871.jpg",
     "/img/galeria/new/DSC00247.jpg",
-    "/img/galeria/new/DSC00076_vertical.jpg",
     "/img/galeria/new/DSC00200_vertical.jpg",
     "/img/galeria/new/DSC09984.jpg",
   ];
