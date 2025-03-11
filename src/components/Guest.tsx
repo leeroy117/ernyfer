@@ -39,7 +39,7 @@ function Guest() {
                     {/* <p className="text-center font-greatVibes text-5xl mt-4">Pedro Garcia Garcia</p> */}
                     <p className="text-center font-cinzelDecorative text-3xl mt-4">{invitado.nombre} {invitado.apellidos}</p>
 				</div>
-				<p className="text-center font-cinzelDecorative text-xl mt-4">{invitado.pases} {invitado.pases == 1 ? 'pase' : 'pases'}  {invitado.pases == 1 ? 'DISPONIBLE' : 'DISPONIBLES'}</p>
+				{/* <p className="text-center font-cinzelDecorative text-xl mt-4">{invitado.pases} {invitado.pases == 1 ? 'pase' : 'pases'}  {invitado.pases == 1 ? 'DISPONIBLE' : 'DISPONIBLES'}</p> */}
                 {/* {
                 <img src={invitado.qr_invitacion} alt="" />
                 } */}
